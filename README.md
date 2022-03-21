@@ -14,7 +14,6 @@ Original App Design Project - README Template
 With the vast amount of information on the internet now, relevant news information may be difficult to find, especially on mobile devices. This app will allow for users to search for relevant news stories through keywords, and to further explore these stories by clicking on them to see the story in detail. 
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
 - **Category:** News, Social Media
 - **Mobile:** Phone, Tablet
 - **Story:** News app that allows users to search keywords to filter through recent news stories for ones that interest them.
