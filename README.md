@@ -78,7 +78,7 @@ With the vast amount of information on the internet now, relevant news informati
 
 ### [BONUS] Interactive Prototype
 
-## Schema 
+## Schema (Change these)
 ### Models
 #### Post
 
