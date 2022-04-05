@@ -31,7 +31,6 @@ With the vast amount of information on the internet now, relevant news informati
 * User can register a new account
 * User can search articles by keyword
 * User can click on each article to show more information about that article, either by getting redirected to a link or a new fragment
-* 
 
 **Optional Nice-to-have Stories**
 
@@ -78,31 +77,21 @@ With the vast amount of information on the internet now, relevant news informati
 
 ### [BONUS] Interactive Prototype
 
-## Schema (Change these)
+## Schema
 ### Models
 #### Post
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
    | objectId      | String   | unique id for the user post (default field) |
-   | author        | Pointer to User| image author |
-   | image         | File     | image that user posts |
-   | caption       | String   | image caption by author |
-   | commentsCount | Number   | number of comments that has been posted to an image |
-   | likesCount    | Number   | number of likes for the post |
-   | createdAt     | DateTime | date when post is created (default field) |
-   | updatedAt     | DateTime | date when post is last updated (default field) |
+   | author        | String| article author |
+   | description     | String   | short description of article |
+   | commentsCount | Number   | number of comments that has been posted to an article |
+   | likesCount    | Number   | number of likes for the post/article |
+   | createdAt     | DateTime | date when post/article is created (default field) |
+
 ### Networking
 #### List of network requests by screen
    - Home Feed Screen
-      - (Read/GET) Query all posts where user is author
-      - (Create/POST) Create a new like on a post
-      - (Delete) Delete existing like
-      - (Create/POST) Create a new comment on a post
-      - (Delete) Delete existing comment
-   - Create Post Screen
-      - (Create/POST) Create a new post object
-   - Profile Screen
-      - (Read/GET) Query logged in user object
-      - (Update/PUT) Update user profile image
+      - (Read/GET) Query all recent posts
 
