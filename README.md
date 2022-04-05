@@ -1,6 +1,3 @@
-Original App Design Project
-===
-
 # Inform (Tentative)
 
 ## Table of Contents
