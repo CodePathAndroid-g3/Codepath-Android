@@ -70,7 +70,7 @@ With the vast amount of information on the internet now, relevant news informati
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://i.imgur.com/ZaCn9IR.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
