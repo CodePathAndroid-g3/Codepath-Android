@@ -23,17 +23,17 @@ With the vast amount of information on the internet now, relevant news informati
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
-
-* User can log in to their existing account
-* User can register a new account
-* User can search articles by keyword
-* User can click on each article to show more information about that article, either by getting redirected to a link or a new fragment
+- [x] User can see and enter login information
+- [ ] User can log in to their existing account
+- [ ] User can register a new account
+- [ ] User can search articles by keyword
+- [ ] User can click on each article to show more information about that article, either by getting redirected to a link or a new fragment
 
 **Optional Nice-to-have Stories**
 
-* User can share stories through social media (Twitter, Facebook, etc)
-* Relevant social media posts will also be shown
-* User can edit account information
+- [ ] User can share stories through social media (Twitter, Facebook, etc)
+- [ ] Relevant social media posts will also be shown
+- [ ] User can edit account information
 
 ### 2. Screen Archetypes
 
