@@ -79,7 +79,7 @@ With the vast amount of information on the internet now, relevant news informati
 
 ## Schema
 ### Models
-#### Post
+#### Article
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
@@ -87,11 +87,17 @@ With the vast amount of information on the internet now, relevant news informati
    | author        | String| article author |
    | description     | String   | short description of article |
    | commentsCount | Number   | number of comments that has been posted to an article |
-   | likesCount    | Number   | number of likes for the post/article |
-   | createdAt     | DateTime | date when post/article is created (default field) |
+   | likesCount    | Number   | number of likes for the article |
+   | createdAt     | DateTime | date when article is created (default field) |
 
 ### Networking
 #### List of network requests by screen
    - Home Feed Screen
       - (Read/GET) Query all recent posts
-
+      - (Create/POST) Create a new comment on a post
+      - (Delete) Delete a post made by yourself
+   - Create Post Screen
+      - (Create/POST) Create a new Article object
+   - Profile Screen
+      - (Read/GET) Query logged in user object
+      - (Update/PUT) Update user info
