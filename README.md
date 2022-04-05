@@ -69,7 +69,6 @@ With the vast amount of information on the internet now, relevant news informati
     * Login (by logging out)
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
 <img src="https://i.imgur.com/ZaCn9IR.jpg" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
