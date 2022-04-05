@@ -36,21 +36,19 @@ With the vast amount of information on the internet now, relevant news informati
 
 * User can share stories through social media (Twitter, Facebook, etc)
 * Relevant social media posts will also be shown
-* 
+* User can edit account information
 
 ### 2. Screen Archetypes
 
 * Login
+    * Shows login entries (email/username and password)
+    * Shows login and register button
 * Register
-   * [list associated required story here]
-   * ...
+   * Allows user to create account to login
 * Home Page
    * Shows the user a list of news stories based on their location and are ordered by recency
    * User can filter the stories here by entering the keyword(s)
    * After clicking on the news article, user is redirected to their browser or to a new fragment with all the information
-* 
-   * [list associated required story here]
-   * ...
 
 ### 3. Navigation
 
@@ -58,16 +56,17 @@ With the vast amount of information on the internet now, relevant news informati
 
 * Home
 * Log out
-* [fill out your third tab]
+* Settings (optional feature to be implemented later)
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Login
+   * Home
+   * Register
+* Register
+   * Login
+* Home
+    * Login (by logging out)
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
