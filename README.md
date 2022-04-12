@@ -34,6 +34,7 @@ With the vast amount of information on the internet now, relevant news informati
 - [ ] User can share stories through social media (Twitter, Facebook, etc)
 - [ ] Relevant social media posts will also be shown
 - [ ] User can edit account information
+- [ ] Users can see a customized UI
 
 ### 2. Screen Archetypes
 
