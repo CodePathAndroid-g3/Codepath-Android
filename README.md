@@ -23,7 +23,7 @@ With the vast amount of information on the internet now, relevant news informati
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
-- [x] User can see and enter login information
+- [x] User can see and enter login/register information
 - [ ] User can log in to their existing account
 - [ ] User can register a new account
 - [ ] User can search articles by keyword
