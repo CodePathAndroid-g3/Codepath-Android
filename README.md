@@ -23,9 +23,10 @@ With the vast amount of information on the internet now, relevant news informati
 ### 1. User Stories (Required and Optional)
 
 **Required Must-have Stories**
-- [x] User can see and enter login/register information
-- [ ] User can log in to their existing account
-- [ ] User can register a new account
+- [x] User can log in to their existing account and be moved to the main page
+- [x] User stays logged in after exiting
+- [x] User can register a new account
+- [ ] User can log out
 - [ ] User can search articles by keyword
 - [ ] User can click on each article to show more information about that article, either by getting redirected to a link or a new fragment
 
