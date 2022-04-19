@@ -8,6 +8,11 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.parse.LogInCallback;
+import com.parse.ParseException;
+import com.parse.ParseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -51,7 +56,24 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void LoginUser(String username, String password) {
-        //TODO: put in database
+        Log.i(TAG, "Attempting to Log in " + username);
+        ParseUser.logInInBackground(username, password, new LogInCallback() {
+            @Override
+            public void done(ParseUser user, ParseException e) {
+                if (e != null) {
+                    Log.e(TAG, "issue with login", e);
+                    return;
+                }
+                goMainActivity();
+                Toast.makeText(LoginActivity.this, "Login success!", Toast.LENGTH_SHORT).show();
+            }
+
+        });
+    }
+
+    private void goMainActivity() {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
     }
 
 }

@@ -8,8 +8,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
-import com.example.inform.R;
+import com.parse.ParseUser;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -17,7 +18,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText etUsername;
     private EditText etEmail;
     private EditText etPassword;
-    private Button btnRegister, btnLogin;
+    private Button btnRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,14 +29,6 @@ public class RegisterActivity extends AppCompatActivity {
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
         btnRegister = findViewById(R.id.btnRegister);
-        btnLogin = findViewById(R.id.btnLogin);
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                goLoginActivity();
-            }
-        });
-
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,13 +41,28 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
-    private void goLoginActivity() {
-        Intent i = new Intent(this, LoginActivity.class);
-        startActivity(i);
-    }
-
     private void RegisterUser(String email, String username, String password) {
         //TODO: put in database
+        ParseUser user = new ParseUser();
+        user.setUsername(username);
+        user.setPassword(password);
+        user.setEmail(email);
+
+        user.signUpInBackground(e -> {
+            if (e == null) {
+                goMainActivity();
+                Toast.makeText(RegisterActivity.this, "Registration success!", Toast.LENGTH_SHORT).show();
+            } else {
+                // Sign up didn't succeed. Look at the ParseException
+                // to figure out what went wrong
+                Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void goMainActivity() {
+        Intent i = new Intent(this, MainActivity.class);
+        startActivity(i);
     }
 
 }
