@@ -10,13 +10,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-
-import com.parse.LogInCallback;
-import com.parse.Parse;
-import com.parse.ParseException;
 import com.parse.ParseUser;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -25,55 +18,48 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText etUsername;
     private EditText etEmail;
     private EditText etPassword;
-    private Button btnRegister, btnLogin;
+    private Button btnRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_register);
 
         etEmail = findViewById(R.id.etEmail);
         etUsername = findViewById(R.id.etUsername);
         etPassword = findViewById(R.id.etPassword);
         btnRegister = findViewById(R.id.btnRegister);
-        btnLogin = findViewById(R.id.btnLogin);
         btnRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                goRegisterActivity();
-            }
-        });
-
-        btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.i(TAG, "onClick login button");
                 String username = etUsername.getText().toString();
                 String password = etPassword.getText().toString();
-                LoginUser(username, password);
+                String email = etEmail.getText().toString();
+                RegisterUser(email, username, password);
             }
         });
     }
 
-    private void goRegisterActivity() {
-        Intent i = new Intent(this, RegisterActivity.class);
-        startActivity(i);
-    }
+    private void RegisterUser(String email, String username, String password) {
+        //TODO: put in database
+        ParseUser user = new ParseUser();
+        user.setUsername(username);
+        user.setPassword(password);
+        user.setEmail(email);
 
-    private void LoginUser(String username, String password) {
-        Log.i(TAG, "Attempting to log in user" + username);
-        ParseUser.logInInBackground(username, password, new LogInCallback() {
-            @Override
-            public void done(ParseUser user, ParseException e) {
-                if (e != null) {
-                    Log.e(TAG, "Issue with login", e);
-                    return;
-                }
+        user.signUpInBackground(e -> {
+            if (e == null) {
                 goMainActivity();
-                // Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterActivity.this, "Registration success!", Toast.LENGTH_SHORT).show();
+            } else {
+                // Sign up didn't succeed. Look at the ParseException
+                // to figure out what went wrong
+                Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }
+
     private void goMainActivity() {
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
