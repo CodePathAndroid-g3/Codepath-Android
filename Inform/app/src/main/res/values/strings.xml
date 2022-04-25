@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Inform</string>
+    <string name="app_name">EventsApp</string>
+    <string name="dashboard_title">Dashboard</string>
+    <string name="dashboard_heading">Find Amazing events happening around you.</string>
+    <string name="dashboard_sub_title">480 events around you</string>
+    <string name="search_bar_hint">search for an event...</string>
+    <string name="dummy_text">RIP</string>
 </resources>
