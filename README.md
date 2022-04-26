@@ -26,8 +26,8 @@ With the vast amount of information on the internet now, relevant news informati
 - [x] User can log in to their existing account and be moved to the main page
 - [x] User stays logged in after exiting
 - [x] User can register a new account
-- [ ] User can log out
-- [ ] User can search articles by keyword
+- [ ] User can search items by keyword
+- [x] User can see phone number
 - [ ] User can click on each article to show more information about that article, either by getting redirected to a link or a new fragment
 
 **Optional Nice-to-have Stories**
